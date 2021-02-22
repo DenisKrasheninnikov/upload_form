@@ -114,7 +114,7 @@ body {
 }
 
 .form {
-	--b24-primary-color: #0f58d0;
+	/* --b24-primary-color: #0f58d0; */
     --b24-primary-text-color: #FFF;
     --b24-primary-hover-color: var(--b24-primary-color);
     --b24-text-color: #000;
@@ -126,10 +126,10 @@ body {
     --b24-font-family-default: "Helvetica Neue",Helvetica,Arial,sans-serif;
     --b24-font-family: var(--b24-font-family-default);
 }
-
+/* 
 .alert{
     color: blue;
-}
+} */
 
 .chbx {
 	color: red;

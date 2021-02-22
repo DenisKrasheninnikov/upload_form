@@ -12,7 +12,7 @@ $Fields = array(
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +23,7 @@ $Fields = array(
 	<div class="form">
 		<div class="form-content">
 			<div class="form-wrapper">
-				<form name="form" method="post" action="Form2stage_upload.php" enctype="multipart/form-data" >
+				<form name="form" method="post" action="Form2stage_upload_layout.php" enctype="multipart/form-data" >
 					<div id="myModal" class="form-zvonok"> 
 						<div id="myModal1" class="form-zvonok1">
 							<div class="form-header">
@@ -69,7 +69,7 @@ $Fields = array(
 						</div>
 						<br>
 						<br>
-						<input type="submit" class="uploadBtn" name="submit" value="Отправить">
+						<button type="submit" class="uploadBtn" name="submit" >Отправить</button>
 						<hr class="hr_down">
 					</div>
 				</div>
