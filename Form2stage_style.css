@@ -126,13 +126,9 @@ body {
     --b24-font-family-default: "Helvetica Neue",Helvetica,Arial,sans-serif;
     --b24-font-family: var(--b24-font-family-default);
 }
-/* 
+
 .alert{
     color: blue;
-} */
-
-.chbx {
-	color: red;
 }
 
 label {

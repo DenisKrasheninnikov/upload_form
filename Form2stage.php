@@ -9,6 +9,7 @@ $Fields = array(
 	'file_3' => array('name' => 'Паспорт ответственного', 'uploaded' => true),
 	'file_4' => array('name' => 'ИНН ответственного', 'uploaded' => false),
 );
+
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +24,7 @@ $Fields = array(
 	<div class="form">
 		<div class="form-content">
 			<div class="form-wrapper">
-				<form name="form" method="post" action="Form2stage_upload_layout.php" enctype="multipart/form-data" >
+				<form name="upload" method="post" action="Form2stage_upload.php" enctype="multipart/form-data" >
 					<div id="myModal" class="form-zvonok"> 
 						<div id="myModal1" class="form-zvonok1">
 							<div class="form-header">
@@ -42,7 +43,7 @@ $Fields = array(
 										<div class="control-file">
 											<div class="control-container">
 												<?php echo $file['name']; ?> <br><br>
-												<input type="file" class="filed" name="my_file[]" />
+												<input type="file" class="filed" name="my_file[]" value='{$key}' />
 											</div>
 										</div>
 									</div>
@@ -69,6 +70,17 @@ $Fields = array(
 						</div>
 						<br>
 						<br>
+						<!-- Передача массива в форму -->
+						<?php
+						foreach ($Fields as $key => $val) {
+							foreach ($val as $k => $v) {
+								?>
+								<input type="hidden" name="test[<?php echo $key; ?>][<?php echo $k ?>]" value="<?php echo $v; ?>">
+								<?php
+								// echo "<br>";
+							}
+						}
+						?>
 						<button type="submit" class="uploadBtn" name="submit" >Отправить</button>
 						<hr class="hr_down">
 					</div>
@@ -78,5 +90,4 @@ $Fields = array(
 	</div>
 </div>
 </body>
-</script>
 </html>
